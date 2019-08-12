@@ -17,7 +17,7 @@ public class Klasican extends Planinar {
 	public String toString() {
 		String k = "";
 		k += "K_";
-		k += super.toString();// pozovamo klasu iz planinara
+		k += super.toString();
 		return k;
 
 	}
