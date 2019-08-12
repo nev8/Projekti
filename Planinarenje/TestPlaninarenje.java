@@ -13,6 +13,8 @@ public class TestPlaninarenje {
 		Klasican d= new Klasican("Marija",20);
 		a.dodaj(p);
 		b.dodaj(p1);
+		c.dodaj(p);
+		d.dodaj(p1);
 		
 		
 		LinkedList<Planinar> l= new LinkedList<Planinar>();
@@ -24,8 +26,11 @@ public class TestPlaninarenje {
 		pla.dodajClana(c);
 		pla.dodajClana(d);
 		
+		for(int i=0; i<l.size();i++){
+		System.out.println(l.get(i)+ "\n");
+			
+		}
 		
-
 	}
 
 }
