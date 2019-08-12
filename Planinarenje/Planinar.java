@@ -6,7 +6,6 @@ public abstract class Planinar {
 	public static int IDglobal=1;
 	public String ime;
 	public int id;
-	//private Planina[] zbirka;
 	private Unoszbirka[] zbirka;
 	private int brPopunjenih;
 	public double zbirvisina=0;
@@ -18,7 +17,6 @@ public abstract class Planinar {
 		this.ime = ime;
 		id=IDglobal;
 		IDglobal++;
-		//ili id=idGlobal++; ili id=++idGlobal;
 		zbirka=new Unoszbirka[kapacitet];
 		brPopunjenih=0;
 		
