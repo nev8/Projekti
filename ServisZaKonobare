@@ -1,0 +1,69 @@
+package javaprojekat;
+
+import java.util.Scanner;
+
+public class ServisZaKonobare {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int idr = 1;
+		int idv = 2;
+		int idp = 3;
+		int ids = 4;
+		int idgp = 41;
+		int idck = 42;
+		int idbv = 43;
+
+		int cenar = 60;
+		int cenav = 60;
+		int cenap = 100;
+		int cenas = 120;
+		int cenagp = 250;
+		int cenack = 240;
+		int cenabv = 290;
+
+		int sumpica = 0;
+		int sumjeca = 0;
+
+		System.out.println("Dobrodosli u pametni servis za konobare!");
+
+		int i = 1;
+		System.out.println("Unesite vasu porudzbinu:");
+		while (i > 0) {
+			int n = sc.nextInt();
+			if (n == idr) {
+				sumpica = sumpica + cenar;
+			} else if (n == idv) {
+				sumpica = sumpica + cenav;
+			} else if (n == idp) {
+				sumpica = sumpica + cenap;
+			} else if (n == ids) {
+				sumpica = sumpica + cenas;
+			} else if (n == idgp) {
+				sumjeca = sumjeca + cenagp;
+			} else if (n == idck) {
+				sumjeca = sumjeca + cenack;
+			} else if (n == idbv) {
+				sumjeca = sumjeca + cenabv;
+			} else if (n == 0)
+				break;
+
+			else {
+				System.err.println("Greska, zeljeni id nije u bazi podataka. Pokusajte ponovo.");
+				continue;
+			}
+			i = i + 1;
+		}
+
+		int zaradapica = (int) (sumpica * 0.1);
+		int zaradajeca = (int) (sumjeca * 0.15);
+
+		System.out.println("Ukupno popijeno: " + sumpica + " din.      Zarada: " + sumpica * 0.1 + " din.");
+		System.out.println("Ukupno pojedeno: " + sumjeca + " din.      Zarada: " + sumjeca * 0.15 + " din.");
+
+		int sve = zaradapica + zaradajeca;
+		System.out.println("Ukupna zarada: " + sve + " din.");
+	}
+
+}
