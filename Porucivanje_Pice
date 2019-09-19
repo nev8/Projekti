@@ -23,7 +23,7 @@ public class Porucivanjepice {
 		int c=40;
 		
 		int sum=200;
-    int pica=1;
+                int pica=1;
 		
 		
 		System.out.println("Dobrodosli u Brasko++ servis za narucivanje!");
