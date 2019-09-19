@@ -1,0 +1,50 @@
+package projekat;
+
+import java.util.Scanner;
+
+public class Takmicenje {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		double max;
+		int pom;
+
+		System.out.println("Unesite broj ucesnika na takmicenju kucanja uskrsnjim jajima: ");
+		int ukupnoucesnika = sc.nextInt();
+
+		int[] rednibrucesnika = new int[ukupnoucesnika];
+		double[] jacinajaja = new double[ukupnoucesnika];
+
+		for (int j = 0; j < ukupnoucesnika; j++) {
+			rednibrucesnika[j] = sc.nextInt();
+			jacinajaja[j] = sc.nextDouble();
+		}
+
+		for (int i = 0; i < jacinajaja.length - 1; i++) {
+			max = jacinajaja[i];
+			pom = rednibrucesnika[i];
+			int pozicija = i;
+			for (int j = i + 1; j < jacinajaja.length; j++) {
+				if (max < jacinajaja[j]) {
+					max = jacinajaja[j];
+					pozicija = j;
+
+					pom = rednibrucesnika[j];
+				}
+			}
+			rednibrucesnika[pozicija] = rednibrucesnika[i];
+			rednibrucesnika[i] = pom;
+			jacinajaja[pozicija] = jacinajaja[i];
+			jacinajaja[i] = max;
+		}
+
+		System.out.println(
+				"Prvo mesto osvojio je takmicar#" + rednibrucesnika[0] + " sa jacinom jajeta " + jacinajaja[0]);
+		System.out.println(
+				"Drugo mesto osvojio je takmicar#" + rednibrucesnika[1] + " sa jacinom jajeta " + jacinajaja[1]);
+		System.out.println(
+				"Trece mesto osvojio je takmicar#" + rednibrucesnika[2] + " sa jacinom jajeta " + jacinajaja[2]);
+	}
+
+}
