@@ -22,7 +22,7 @@ public class Pozoriste {
 		for (int i = 0; i < skracenica.length; i++) {
 			s += skracenica[i].charAt(0);
 		}
-		return s;
+		return s.toUpperCase();
 	}
 
 	public String toString() {
